@@ -6,20 +6,20 @@ public class FlowerPack {
     private Flower flower;
     private int quantity;
 
-    public FlowerPack(Flower flower, int quantity_set) {
+    public FlowerPack(Flower flower, int quantitySet) {
         this.flower = new Flower(flower);
-        this.quantity = quantity_set;
+        this.quantity = quantitySet;
     }
 
     public double getPrice() {
         return quantity * flower.getPrice();
     }
 
-    public void setQuantity(int quantity_sm) {
-        if (quantity_sm < 1) {
+    public void setQuantity(int quantitySm) {
+        if (quantitySm < 1) {
             this.quantity = 1;
         } else {
-            this.quantity = quantity_sm;
+            this.quantity = quantitySm;
         }
     }
 }
