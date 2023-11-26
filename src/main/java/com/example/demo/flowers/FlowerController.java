@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/flower")
 public class FlowerController {
+	int maximum = 10; // so the linter is okay
 	// private FlowerService flowerService;
 
 	// @Autowired
@@ -31,8 +32,7 @@ public class FlowerController {
 
 	@GetMapping("/flower")
 	public Flower getFlower() {
-		int maximum = 10;
-		int rndInt = (int)(Math.random() * maximum);
+		int rndInt = (int) (Math.random() * maximum);
 		return new Flower(rndInt, rndInt, rndInt, rndInt);
 	}
     

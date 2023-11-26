@@ -46,10 +46,10 @@ public class Order {
 
     void processOrder() {
         System.out.printf("You ordered " + items.size() + " items\n");
-        System.out.printf("You have chosen " +
-            payment.getClass().getSimpleName() + " payment strategy");
-        System.out.printf("You choose " + delivery.getClass().getSimpleName() +
-            " delivery strategy");
+        System.out.printf("You have chosen " 
+            + payment.getClass().getSimpleName() + " payment strategy");
+        System.out.printf("You choose " + delivery.getClass().getSimpleName()
+            + " delivery strategy");
         System.out.printf("Total price is " + price);
     }
 }
