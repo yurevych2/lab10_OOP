@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/flower")
 public class FlowerController {
-	int maximum = 10; // so the linter is okay
+	private int maximum = 10; // so the linter is okay
 	// private FlowerService flowerService;
 
 	// @Autowired
