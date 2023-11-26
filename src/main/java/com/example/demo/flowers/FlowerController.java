@@ -1,9 +1,6 @@
 package com.example.demo.flowers;
-
 import java.util.ArrayList;
 import java.util.List;
-
-// import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,7 +31,9 @@ public class FlowerController {
 
 	@GetMapping("/flower")
 	public Flower getFlower() {
-		return new Flower(0, 5, 8, 1);
+		int maximum = 10;
+		int rndInt = (int)(Math.random() * maximum);
+		return new Flower(rndInt, rndInt, rndInt, rndInt);
 	}
     
 }

@@ -13,20 +13,17 @@ import com.example.demo.flowers.Item;
 public class DeliveryTest {
     private List<Item> items;
 
-    @BeforeEach
-    public void init() {
-        List<Flower> items = new ArrayList<>();
-    }
-
     @Test
     public void testDHLDelivery() {
         Delivery delivery = new DHLDeliveryStrategy();
-        Assertions.assertEquals("Delivery by DHL of: null", delivery.deliver(items));
+        Assertions.assertEquals("Delivery by DHL of: null",
+            delivery.deliver(items));
     }
 
     @Test
     public void testPostDelivery() {
         Delivery delivery = new PostDeliveryStrategy();
-        Assertions.assertEquals("Delivering by post such items: null", delivery.deliver(items));
+        Assertions.assertEquals("Delivering by post such items: null",
+            delivery.deliver(items));
     }
 }
