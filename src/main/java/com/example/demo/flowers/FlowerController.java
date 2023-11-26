@@ -20,8 +20,8 @@ public class FlowerController {
 	@GetMapping("/flowers")
 	public List<Flower> getFlowers() {
 		List<Flower> flowers = new ArrayList<>();
-		flowers.add(new Flower(3, 5, 7, 1));
-		flowers.add(new Flower(4, 6, 8, 1));
+		// flowers.add(new Flower(3, 5, 7, 1));
+		// flowers.add(new Flower(4, 6, 8, 1));
 		
 		return flowers;
 	}
