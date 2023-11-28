@@ -33,7 +33,7 @@ public class FlowerController {
 	@GetMapping("/flower")
 	public Flower getFlower() {
 		int rndInt = (int) (Math.random() * maximum);
-		return new Flower(rndInt, rndInt, rndInt, rndInt);
+		return new Flower(rndInt, rndInt, Integer.toString(rndInt), rndInt, rndInt);
 	}
     
 }

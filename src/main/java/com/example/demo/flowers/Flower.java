@@ -9,21 +9,26 @@ import lombok.ToString;
 
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter @ToString
 // @Entity
-public class Flower {
+public class Flower extends Item {
     // @Id
     // private int id;
+
     private double sepalLength;
     private int color;
-    // 
+    private String description;
     private double price;
     private int flowerType;
-    // 
 
     public Flower(Flower flower) {
         this.color = flower.color;
         this.price = flower.price;
         this.sepalLength = flower.sepalLength;
         this.flowerType = flower.flowerType;
+    }
+
+    @Override
+    public String getDescription() {
+        return this.description;
     }
 
 }
